@@ -1,9 +1,9 @@
 import React from 'react'
 
-function header() {
-  return (
-    <div>header</div>
-  )
+function Header() {
+    return (
+        <div className='bg-red-400'>header</div>
+    );
 }
 
-export default header
+export default Header;
