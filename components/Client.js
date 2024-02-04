@@ -23,21 +23,21 @@ const clientImg = [
 
 function Client() {
     return (
-        <div>
+        <div className='mt-24 rounded-tl-3xl rounded-tr-3xl bg-gray-800 py-20'>
             <Container>
-                <div>
-                    <h2>導入いただいている企業様一覧</h2>
-                    <div>
-                        <ul>
-                            {clientImg.map(([client, logo]) => (
-                                <li key={client}>
-                                    <Image src={logo} alt={client} />
-                                </li>
-
-                            ))}
-                        </ul>
-                    </div>
+                <div className='flex items-center gap-x-8'>
+                    <h2 className='text-center text-white text-sm font-semibold ml-5'>導入いただいている企業様一覧</h2>
+                    <div className='h-px flex-auto bg-neutral-700 mr-5'></div>
                 </div>
+
+                <ul className='mt-10 grid grid-cols-2 gap-x-8 lg:grid-cols-4 gap-10'>
+                    {clientImg.map(([client, logo]) => (
+                        <li key={client}>
+                            <Image src={logo} alt={client} />
+                        </li>
+                    ))}
+                </ul>
+
             </Container>
         </div>
     )
