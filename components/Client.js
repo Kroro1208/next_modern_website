@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Container from './Container'
 import Image from 'next/image';
@@ -9,6 +10,8 @@ import logo5 from '/public/clientImg/logo5.png';
 import logo6 from '/public/clientImg/logo6.png';
 import logo7 from '/public/clientImg/logo7.png';
 import logo8 from '/public/clientImg/logo8.png';
+import { FadeInStagger } from './FadeIn';
+import FadeIn from './FadeIn';
 
 const clientImg = [
     ["1", logo1],
@@ -25,18 +28,22 @@ function Client() {
     return (
         <div className='mt-24 rounded-tl-3xl rounded-tr-3xl bg-gray-800 py-20'>
             <Container>
-                <div className='flex items-center gap-x-8'>
+                <FadeIn className='flex items-center gap-x-8'>
                     <h2 className='text-center text-white text-sm font-semibold ml-5'>導入いただいている企業様一覧</h2>
                     <div className='h-px flex-auto bg-neutral-700 mr-5'></div>
-                </div>
+                </FadeIn>
 
-                <ul className='mt-10 grid grid-cols-2 gap-x-8 lg:grid-cols-4 gap-10'>
-                    {clientImg.map(([client, logo]) => (
-                        <li key={client}>
-                            <Image src={logo} alt={client} />
-                        </li>
-                    ))}
-                </ul>
+                <FadeInStagger faster>
+                    <ul className='mt-10 grid grid-cols-2 gap-x-8 lg:grid-cols-4 gap-10'>
+                        {clientImg.map(([client, logo]) => (
+                            <li key={client}>
+                                <FadeIn>
+                                    <Image src={logo} alt={client} />
+                                </FadeIn>
+                            </li>
+                        ))}
+                    </ul>
+                </FadeInStagger>
 
             </Container>
         </div>
