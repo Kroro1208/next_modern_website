@@ -27,7 +27,7 @@ function Header() {
                         {
                             headerListItems.map((item) => (
                                 <Link key={item.id} href={item.link}>
-                                    <li className={`${active === item.link ? 'text-primeColor' : 'text-gray-600'} hover:text-primeColor cursor-pointer duration-600 group relative`}>
+                                    <li className={`${active === item.link ? 'text-primeColor' : 'text-black'} hover:text-primeColor cursor-pointer duration-600 group relative`}>
                                         {item.title}
                                         <span className={`${active === item.link ? 'scale-100' : 'scale-0'} absolute w-full group-hover:scale-100 inline-block h-[2px] -bottom-[1px] left-0 bg-primeColor duration-500`}></span>
                                     </li>
@@ -35,7 +35,7 @@ function Header() {
                             ))
                         }
                     </ul>
-                    <button className='w-28 h-8 mb-2 bg-blue-700 text-white rounded hover:bg-primeColor duration-300'>
+                    <button className='w-28 h-8 mb-2 bg-blue-700 text-white rounded-full hover:bg-primeColor duration-300'>
                         連絡する
                     </button>
                 </div>
