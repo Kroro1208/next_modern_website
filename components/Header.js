@@ -1,8 +1,18 @@
+'use client';
 import React from 'react'
 import Link from 'next/link';
 import { headerListItems } from '@/constants';
+import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+
 
 function Header() {
+    const [active, setActive] = useState();
+    const pathName = usePathname();
+    useEffect(() => {
+        setActive(pathName);
+    }, [pathName])
+
     return (
         <div className='w-full h-20 border-b-[1px] border-gray-500 bg-white'>
             <div className='h-full max-wc-screen-2xl mx-auto flex items-center justify-between mr-3'>
@@ -17,15 +27,15 @@ function Header() {
                         {
                             headerListItems.map((item) => (
                                 <Link key={item.id} href={item.link}>
-                                    <li className='text-gray-600 hover:text-primeColor cursor-pointer duration-300 group relative'>
+                                    <li className={`${active === item.link ? 'text-primeColor' : 'text-gray-600'} hover:text-primeColor cursor-pointer duration-600 group relative`}>
                                         {item.title}
-                                        <span className='absolute w-full scale-0 group-hover:scale-100 inline-block h-[2px] -bottom-[1px] left-0 bg-primeColor duration-100'></span>
+                                        <span className={`${active === item.link ? 'scale-100' : 'scale-0'} absolute w-full group-hover:scale-100 inline-block h-[2px] -bottom-[1px] left-0 bg-primeColor duration-500`}></span>
                                     </li>
                                 </Link>
                             ))
                         }
                     </ul>
-                    <button className='w-28 h-10 bg-blue-700 text-white rounded hover:bg-primeColor duration-300'>
+                    <button className='w-28 h-8 mb-2 bg-blue-700 text-white rounded hover:bg-primeColor duration-300'>
                         連絡する
                     </button>
                 </div>
