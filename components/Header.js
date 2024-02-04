@@ -12,7 +12,7 @@ function Header() {
                     <span className='absolute bottom-0 w-full h-[2px] inline-block bg-primeColor -translate-x-[100%] group-hover:translate-x-0 transition-transform duration-700'></span>
                 </Link>
                 {/* headerList */}
-                <div className='hidden md:inline-flex items-center gap-8 text-sm font-extrabold tracking-wide'>
+                <div className='hidden md:inline-flex items-center gap-8 text-sm font-semibold tracking-wide'>
                     <ul className='flex gap-8'>
                         {
                             headerListItems.map((item) => (
