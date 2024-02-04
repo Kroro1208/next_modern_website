@@ -1,9 +1,11 @@
-import React from 'react'
-import Container from './Container'
-import Image from 'next/image'
-import bannerImage1 from '/public/bannerImg/img1.png'
-import bannerImage2 from '/public/bannerImg/img2.png'
-import bannerImage4 from '/public/bannerImg/img4.png'
+"use client";
+import React from 'react';
+import Container from './Container';
+import Image from 'next/image';
+import bannerImage1 from '/public/bannerImg/img1.png';
+import bannerImage2 from '/public/bannerImg/img2.png';
+import bannerImage4 from '/public/bannerImg/img4.png';
+import { motion } from "framer-motion";
 
 function Banner() {
     return (
@@ -25,25 +27,37 @@ function Banner() {
                     </div>
                     {/* right */}
                     <div className='w-full relative flex justify-center items-center gap-6'>
-                        <div>
+                        <motion.div
+                            initial={{ scale: 0, y: 200 }}
+                            animate={{ scale: 1, y: 0 }}
+                            transition={{ duration: 1.0, ease: 'easeOut' }}
+                        >
                             <Image
                                 src={bannerImage1}
                                 alt='bannerImage1'
                                 className='w-52 rounded-2xl object-cover' />
-                        </div>
+                        </motion.div>
                         <div className='flex flex-col gap-7'>
-                            <div>
+                            <motion.div
+                                initial={{ scale: 0, y: 300 }}
+                                animate={{ scale: 1, y: 0 }}
+                                transition={{ duration: 1.5, ease: 'easeOut' }}
+                            >
                                 <Image
                                     src={bannerImage2}
                                     alt='bannerImage2'
                                     className='w-52 rounded-2xl object-cover' />
-                            </div>
-                            <div>
+                            </motion.div>
+                            <motion.div
+                                initial={{ scale: 0, y: 200 }}
+                                animate={{ scale: 1, y: 0 }}
+                                transition={{ duration: 2.0, ease: 'easeOut' }}
+                            >
                                 <Image
                                     src={bannerImage4}
                                     alt='bannerImage3'
                                     className='w-52 rounded-2xl object-cover' />
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>
