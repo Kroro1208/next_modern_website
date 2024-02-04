@@ -1,6 +1,7 @@
 import { BIZ_UDGothic } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const bizU = BIZ_UDGothic({ subsets: ["latin"], weight: ['400', '700'] });
 
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
       <body className={bizU.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
