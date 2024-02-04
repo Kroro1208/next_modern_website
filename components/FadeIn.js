@@ -19,6 +19,7 @@ function FadeIn(props) {
             {...motionProps}
             {...props}
         >
+        {/* // FadeInタグで囲まれている部分の要素<h1></h1>など */}
             {props.children}
         </motion.div>
     )
