@@ -1,8 +1,8 @@
-import { Inter } from "next/font/google";
+import { BIZ_UDGothic } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 
-const inter = Inter({ subsets: ["latin"] });
+const bizU = BIZ_UDGothic({ subsets: ["latin"], weight: ['400', '700'] });
 
 export const metadata = {
   title: "Next Modern Website",
@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={bizU.className}>
         <Header />
         {children}
       </body>
