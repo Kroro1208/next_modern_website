@@ -1,5 +1,9 @@
 import React from 'react'
 import Container from './Container'
+import Image from 'next/image'
+import bannerImage1 from '/public/bannerImg/img1.png'
+import bannerImage2 from '/public/bannerImg/img2.png'
+import bannerImage4 from '/public/bannerImg/img4.png'
 
 function Banner() {
     return (
@@ -22,13 +26,24 @@ function Banner() {
                     {/* right */}
                     <div className='w-full relative flex justify-center items-center gap-6'>
                         <div>
-                            img1
+                            <Image
+                                src={bannerImage1}
+                                alt='bannerImage1'
+                                className='w-52 rounded-2xl object-cover' />
                         </div>
-                        <div>
-                            img2
-                        </div>
-                        <div>
-                            img3
+                        <div className='flex flex-col gap-7'>
+                            <div>
+                                <Image
+                                    src={bannerImage2}
+                                    alt='bannerImage2'
+                                    className='w-52 rounded-2xl object-cover' />
+                            </div>
+                            <div>
+                                <Image
+                                    src={bannerImage4}
+                                    alt='bannerImage3'
+                                    className='w-52 rounded-2xl object-cover' />
+                            </div>
                         </div>
                     </div>
                 </div>
