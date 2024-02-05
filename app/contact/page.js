@@ -14,14 +14,23 @@ function ContactPage() {
     const sendEmail = (e) => {
         e.preventDefault();
 
+        // 確認ダイアログを表示
+        const isConfirmed = window.confirm("メールを送信してもよろしいですか？");
+        if (!isConfirmed) {
+            // ユーザーがキャンセルを選択した場合、送信処理を中断
+            return;
+        }
+
         emailjs.sendForm("service_mnlw8oi", "template_x4nfmrw", form.current, "r48m0uYsCIYJ_ye1q").then((result) => {
             form.current.reset();
+            alert("メールが正常に送信されました。");
             console.log(result.text);
         }, (error) => {
+            alert("メール送信に失敗しました。");
             console.log(error.text);
         });
     };
-    
+
     return (
 
         <Container>
