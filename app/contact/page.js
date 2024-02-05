@@ -14,14 +14,14 @@ function ContactPage() {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
-            .then((result) => {
-                form.current.reset()
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
+        emailjs.sendForm("service_mnlw8oi", "template_x4nfmrw", form.current, "r48m0uYsCIYJ_ye1q").then((result) => {
+            form.current.reset();
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
     };
+    
     return (
 
         <Container>
