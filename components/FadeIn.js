@@ -29,6 +29,8 @@ export default FadeIn
 
 export const FadeInStagger = ({ faster = false, ...props }) => {
     return (
+        // createContextで作成したコンテキスト（この場合はFadeInStaggerContext）を他のファイルやコンポーネントで使用する際に、
+        //.Providerを使用してそのコンテキストの値を提供します。
         <FadeInStaggerContext.Provider
             value={true}
         >
