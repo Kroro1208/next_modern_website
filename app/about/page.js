@@ -4,12 +4,11 @@ import React from 'react';
 import { Title } from '@/components/Title';
 import FadeIn from '@/components/FadeIn';
 import { motion } from 'framer-motion';
-import aboutImg from "/public/aboutImg/about.png";
 
 
 function AboutPage() {
     return (
-        <div className="backgroundImage h-screen">
+        <div className="backgroundImage min-h-screen">
             <Container>
                 <div className='flex flex-col gap-6 p-8'>
                     <FadeIn>
@@ -47,14 +46,6 @@ function AboutPage() {
                             </motion.p>
                         </div>
                     </div>
-
-                    {/* <div>
-                        <Image
-                            src={aboutImg}
-                            alt='aboutImg'
-                            className='w-48 rounded-xl mb-3'
-                        />
-                    </div> */}
 
                     <div className='flex flex-col md:flex-row items-center gap-10'>
                         <div className='max-w-2xl'>

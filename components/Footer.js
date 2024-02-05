@@ -9,11 +9,6 @@ import { TbMinusVertical } from "react-icons/tb";
 import Link from 'next/link';
 
 
-
-
-
-
-
 function Footer() {
     const footerList = [
         {
