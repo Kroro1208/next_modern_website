@@ -26,10 +26,10 @@ const clientImg = [
 
 function Client() {
     return (
-        <div className='mt-24 rounded-tl-3xl rounded-tr-3xl bg-gray-800 py-20'>
+        <div className='mt-24 rounded-tl-3xl rounded-tr-3xl bg-yellow-200 py-20'>
             <Container>
                 <FadeIn className='flex items-center gap-x-8'>
-                    <h2 className='text-center text-white text-sm font-semibold ml-5'>導入いただいている企業様一覧</h2>
+                    <h2 className='text-center text-black text-sm font-semibold ml-5'>導入いただいている企業様一覧</h2>
                     <div className='h-px flex-auto bg-neutral-700 mr-5'></div>
                 </FadeIn>
 

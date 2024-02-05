@@ -10,7 +10,7 @@ import FadeIn from './FadeIn';
 
 function Banner() {
     return (
-        <div className='bg-blue-900 w-full rounded-bl-3xl rounded-br-3xl relative px-4'>
+        <div className='bg-blue-800 w-full rounded-bl-3xl rounded-br-3xl relative px-4'>
             <Container>
                 <div className='text-white grid md:grid-cols-2 gap-20 place-items-center'>
                     {/* left */}
