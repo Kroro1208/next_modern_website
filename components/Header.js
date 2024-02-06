@@ -56,23 +56,31 @@ function Header() {
                 </div>
 
                 {/* small screen menu */}
-                <div className='w-full h-screen lg:hidden fixed top-0 left-0 bg-darkBlue bg-opacity-90 z-50'>
-                    <span className='absolute right-2 top-8 text-3xl text-red-200 hover:text-red-600 cursor-pointer duration-300'>
-                        <TfiClose />
-                    </span>
-                    <Link href={"/"}>
-                        <p className='text-2xl font-bold text-white mb-4 p-5'>
-                            Next Tech
-                        </p>
-                    </Link>
-                    <ul className='flex flex-col text-gray-300 text-sm gap-3 font-semibold p-5'>
-                        {headerListItems.map((item) => (
-                            <Link key={item.id} href={item.link}>
-                                <li className='hover:text-black cursor-pointer duration-300'>{item.title}</li>
+
+                {
+                    showMenu && (
+                        <div className='w-full h-screen lg:hidden fixed top-0 left-0 bg-blue-950 bg-opacity-90 z-50'>
+                            <span className='absolute right-2 top-8 text-3xl text-red-200 hover:text-red-600 cursor-pointer duration-300'
+                                onClick={() => setShowMenu(false)}
+                            >
+                                <TfiClose />
+                            </span>
+                            <Link href={"/"} onClick={() => setShowMenu(false)}>
+                                <p className='text-2xl font-bold text-white mb-4 p-5'>
+                                    Next Tech
+                                </p>
                             </Link>
-                        ))}
-                    </ul>
-                </div>
+                            <ul className='flex flex-col text-gray-300 text-sm gap-3 font-semibold p-5'>
+                                {headerListItems.map((item) => (
+                                    <Link key={item.id} href={item.link}>
+                                        <li className='hover:text-black cursor-pointer duration-300' onClick={() => setShowMenu(false)}>{item.title}</li>
+                                    </Link>
+                                ))}
+                            </ul>
+                        </div>
+                    )
+                }
+
             </div>
         </div>
     );
