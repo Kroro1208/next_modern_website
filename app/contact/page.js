@@ -54,7 +54,7 @@ function ContactPage() {
                         <FadeIn>
                             <div class="flex flex-col text-center w-full mb-12">
                                 <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">お問い合わせフォーム</h1>
-                                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">開発依頼や見積もり等のお問い合わせの場合は、できるだけ詳細にお願いいたします。</p>
+                                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">開発依頼や見積もり等のお問い合わせの場合はできるだけ詳細にお願いいたします。</p>
                             </div>
                         </FadeIn>
                         <div class="lg:w-1/2 md:w-2/3 mx-auto">
@@ -93,7 +93,7 @@ function ContactPage() {
                                     </div>
                                 </form>
                                 <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-                                    <a class="text-indigo-500">yamagata_7580@yahoo.co.jp</a>
+                                    <a class="text-indigo-500">ご協力ありがとうございます</a>
                                 </div>
                             </motion.div>
                         </div>

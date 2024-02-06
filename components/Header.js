@@ -18,7 +18,7 @@ function Header() {
             <div className='h-full max-wc-screen-2xl mx-auto flex items-center justify-between mr-3'>
                 {/* logo */}
                 <Link href={"/"} className='relative group overflow-hidden'>
-                    <p className='text-2xl font-bold'>Next Tech</p>
+                    <p className='text-2xl font-bold pl-5'>Next Tech</p>
                     <span className='absolute bottom-0 w-full h-[2px] inline-block bg-primeColor -translate-x-[100%] group-hover:translate-x-0 transition-transform duration-700'></span>
                 </Link>
                 {/* headerList */}
