@@ -4,11 +4,16 @@ import Link from 'next/link';
 import { headerListItems } from '@/constants';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import { TfiClose } from "react-icons/tfi";
+
 
 
 function Header() {
     const [active, setActive] = useState();
     const pathName = usePathname();
+    const [showMenu, setShowMenu] = useState(false);
+
+
     useEffect(() => {
         setActive(pathName);
     }, [pathName])
@@ -38,6 +43,35 @@ function Header() {
                     <button className='w-28 h-8 mb-2 bg-blue-700 text-white rounded-full hover:bg-primeColor duration-300'>
                         連絡する
                     </button>
+                </div>
+                {/* small logo */}
+                <div className='w-8 h-7 group lg:hidden flex flex-col justify-between cursor-pointer overflow-hidden'
+                    onClick={() => setShowMenu(true)}
+                >
+                    <span className='w-full h-[3px] bg-gray-500 group-hover:bg-primeColor
+                    inline-flex -translate-x-1 group-hover:translate-x-0 transition-transform duration-500'></span>
+                    <span className='w-full h-[3px] bg-gray-500 group-hover:bg-primeColor
+                    inline-flex -translate-x-3 group-hover:translate-x-0 transition-transform duration-500'></span>
+                    <span className='w-full h-[3px] bg-gray-500 group-hover:bg-primeColor'></span>
+                </div>
+
+                {/* small screen menu */}
+                <div className='w-full h-screen lg:hidden fixed top-0 left-0 bg-darkBlue bg-opacity-90 z-50'>
+                    <span className='absolute right-2 top-8 text-3xl text-red-200 hover:text-red-600 cursor-pointer duration-300'>
+                        <TfiClose />
+                    </span>
+                    <Link href={"/"}>
+                        <p className='text-2xl font-bold text-white mb-4 p-5'>
+                            Next Tech
+                        </p>
+                    </Link>
+                    <ul className='flex flex-col text-gray-300 text-sm gap-3 font-semibold p-5'>
+                        {headerListItems.map((item) => (
+                            <Link key={item.id} href={item.link}>
+                                <li className='hover:text-black cursor-pointer duration-300'>{item.title}</li>
+                            </Link>
+                        ))}
+                    </ul>
                 </div>
             </div>
         </div>
