@@ -4,6 +4,8 @@ import React from 'react';
 import { Title } from '@/components/Title';
 import FadeIn from '@/components/FadeIn';
 import { motion } from 'framer-motion';
+import { AiOutlineApple } from "react-icons/ai";
+
 
 
 function AboutPage() {
@@ -12,12 +14,16 @@ function AboutPage() {
             <Container>
                 <div className='flex flex-col gap-6 p-8'>
                     <FadeIn>
-                        <Title title={"Our Vision and Mission"} />
+                        <div className='mt-5 text-3xl flex gap-3'>
+                            <AiOutlineApple />
+                            <Title title={"Our Vision and Mission"} />
+                            <AiOutlineApple />
+                        </div>
                     </FadeIn>
-                    <div className='flex flex-col md:flex-row items-center gap-10'>
+                    <div className='flex flex-col md:flex-row items-center gap-10 mt-10'>
                         <div className='max-w-2xl'>
                             <FadeIn>
-                                <strong>ビジョン（Vision）</strong>
+                                <p className='text-2xl'><strong>ビジョン（Vision）</strong></p>
                             </FadeIn>
                             <motion.p
                                 initial={{ opacity: 0, y: 10 }} // 文字を透明にして、少し下からスタート
@@ -30,10 +36,10 @@ function AboutPage() {
                             </motion.p>
                         </div>
                     </div>
-                    <div className='flex flex-col md:flex-row items-center gap-10'>
-                        <div className='max-w-2xl'>
+                    <div className='flex flex-col md:flex-row items-center gap-10 mt-10'>
+                        <div>
                             <FadeIn>
-                                <strong>使命（Mission）</strong>
+                                <p className='text-2xl'><strong>使命（Mission）</strong></p>
                             </FadeIn>
                             <motion.p
                                 initial={{ opacity: 0, y: 10 }} // 文字を透明にして、少し下からスタート
@@ -47,10 +53,10 @@ function AboutPage() {
                         </div>
                     </div>
 
-                    <div className='flex flex-col md:flex-row items-center gap-10'>
-                        <div className='max-w-2xl'>
+                    <div className='flex flex-col md:flex-row items-center gap-10 mt-10'>
+                        <div>
                             <FadeIn>
-                                <strong>パートナーシップ（Partnership）</strong>
+                                <p className='text-2xl'><strong>パートナーシップ（Partnership）</strong></p>
                             </FadeIn>
                             <motion.p
                                 initial={{ opacity: 0, y: 10 }} // 文字を透明にして、少し下からスタート
@@ -65,7 +71,7 @@ function AboutPage() {
                         </div>
                         <div className='max-w-2xl'>
                             <FadeIn>
-                                <strong>カスタマーファースト（Customer First）</strong>
+                                <p className='text-2xl'><strong>カスタマーファースト（Customer First）</strong></p>
                             </FadeIn>
                             <motion.p
                                 initial={{ opacity: 0, y: 10 }} // 文字を透明にして、少し下からスタート
